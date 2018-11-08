@@ -24,7 +24,7 @@ $(call inherit-product, device/xiaomi/whyred/device.mk)
 
 # Inherit some common AOSP stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
-$(call inherit-product, vendor/aosp/config/common.mk)
+$(call inherit-product, vendor/aosp/common.mk)
 
 PRODUCT_NAME := aosp_whyred
 PRODUCT_BRAND := Xiaomi
