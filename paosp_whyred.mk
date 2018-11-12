@@ -21,12 +21,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 
 # Inherit from whyred device
 $(call inherit-product, device/xiaomi/whyred/device.mk)
+$(call inherit-product, vendor/paosp/config/common_full_phone.mk)
 
-# Inherit some common AOSP stuff.
-TARGET_BOOT_ANIMATION_RES := 1080
-$(call inherit-product, vendor/aosp/common.mk)
-
-PRODUCT_NAME := aosp_whyred
+PRODUCT_NAME := paosp_whyred
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
@@ -42,3 +39,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := xiaomi/whyred/whyred:8.1.0/OPM1.171019.011/V9.5.11.0.OEIMIFA:user/release-keys
 
 TARGET_VENDOR := Xiaomi
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.paosp.maintainer=edi194
+	
+	
